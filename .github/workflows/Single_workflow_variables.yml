@@ -1,18 +1,17 @@
-name: practice signle workflow variables
+name: practice single workflow variables
 
 on: workflow_dispatch
 
 env: 
   cloud: google-cloud
-  
+  greeting_name: Hello!
+  First_name: Fahad
+
 jobs:
   Greetings:
-    runs-on: ubuntu-latest
-    env:
-      greeting_name: Hello!
+    runs-on: ubuntu-latest      
     steps:
-      - name: Hello my name is fahad
+      - name: Say_Greetings
         run: echo $greeting_name $First_name is using $cloud
-        env:
-          First_name: Fahad
+          
       
